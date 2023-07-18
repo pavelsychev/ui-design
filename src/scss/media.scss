@@ -1,0 +1,205 @@
+@media (min-width: 1320px){
+  .type-scale{
+    &__title-one{
+      font-size: 72px;
+    }
+    &__title-two{
+      font-size: 64px;
+    }
+    &__title-three{
+      font-size: 56px;
+    }
+    &__title-four{
+      font-size: 34px;
+    }
+    &__title-five{
+      font-size: 28px;
+    }
+    &__title-six{
+      font-size: 20px;
+    }
+    &__paragraph-one{
+      font-size: 16px;
+    }
+    &__paragraph-two{
+      font-size: 14px;
+    }
+    &__label{
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 1150px){
+  .type-face{
+    &__font-regular-letter-container,
+    &__font-semibold-letter-container{
+      grid-auto-flow: initial;
+      grid-template-columns: 30px 30px 30px 30px 30px;
+      gap: 0 20px;
+    }
+  }
+   .flaps{
+    &__pic-two,
+    &__pic-three {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+     &__pic-img-two{
+      height: 520px;
+      width: 100vw;
+      object-fit: cover;
+    }
+    &__pic-img-three{
+      height: 563px;
+      width: 100vw;
+      object-fit: cover;
+    }
+   }
+}
+@media (max-width: 1019px){
+  .forms{
+    &__reset{
+      margin: 0 0 0 0;
+    }
+   }
+}
+@media (max-width: 840px){
+  .form{
+    &__search{
+      justify-content: center;
+    }
+    &__area-select-three{
+      margin: 150px 0 0 0;
+    }
+    &__checkboxes-one,
+    &__checkboxes-two,
+    &__checkboxes-radio-one,
+    &__checkboxes-radio-two,
+    &__checkboxes-toggle-one,
+    &__checkboxes-toggle-two {
+      justify-content: center;
+    }
+    &__checkbox-label, 
+    &__checkbox-radio-label,
+    &__checkbox-toggle-label {
+      justify-content: center;
+    }
+    &__tags{
+      justify-content: center;
+    }
+    &__small-buttons,
+    &__middle-buttons,
+    &__big-buttons{
+      justify-content: center;
+    }
+    &__loaders{
+      justify-content: center;
+    }
+  }
+  .logos{
+    &__inner{
+      justify-content: center;
+    }
+  }
+  .headers{
+    &__header-first-items{
+      flex: 0 0 auto;
+    }
+    &__header-first-items-link{
+      font-size: calc(13px + 3 * (100vw / 1320));
+    }
+    &__header-third-inner{
+      flex-direction: column;
+      gap: 20px 0;
+    }
+  }
+}
+@media (max-width: 700px){
+  .flaps{
+    &__desc-pre-title {
+      text-align: center;
+      font-size: calc(12px + 4 * (100vw / 1200));
+    }
+    &__desc-title {
+      text-align: center;
+      font-size: calc(48px + 8 * (100vw / 1200));
+    }
+    &__desc-text {
+      text-align: center;
+      font-size: calc(15px + 6 * (100vw / 1200));
+    }
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__pic-img-one {
+      border-radius: 20px 20px 20px 20px;
+    }
+  }
+}
+@media (max-width: 670px){
+  .type-face{
+    &__container{
+      flex-direction: column;
+      align-items: center;
+      gap: 60px 0;
+    }
+    &__letter-container{
+      width: 290px;
+      height: 290px;
+      border-radius: 40px;
+    }
+    &__letter-big{
+      font-size: 176px;
+    }
+  }
+  .callout{
+    &__three,
+    &__four {
+      flex-direction: column;
+      padding: 20px;
+      justify-content: center;
+    }
+    &__three-text,
+    &__four-text {
+      padding: 0 0 0 0;
+      text-align: center;
+      margin: 0 0 10px 0;
+    }
+    &__one-content-title,
+    &__two-content-title {
+      text-align: center;
+      font-size: calc(35px + 9 * (100vw / 1320));
+    }
+    &__one-content-text,
+    &__two-content-text {
+      text-align: center;
+      font-size: calc(15px + 5 * (100vw / 1320));
+    }
+    &__one-btns,
+    &__two-btns {
+      justify-content: center;
+    }
+  }
+  .charts{
+    &__bar-chart{
+    }
+  }
+}
+@media (max-width: 390px){
+  .modals{
+    &__one-item,
+    &__two-item {
+      text-align: center;
+    }
+    &__one-item-btn,
+    &__two-item-btn {
+      align-self: center;
+    }
+    &__two-item-btn-cancel{
+      margin: 0 0 5px 0;
+    }
+  }
+}
