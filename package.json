@@ -49,6 +49,8 @@
   "homepage": "http://https://pavelsychev.github.io/ui-design",
   "dependencies": {
     "gh-pages": "^5.0.0",
-    "gulp-gh-pages": "^0.5.4"
+    "gsap": "^3.12.2",
+    "gulp-gh-pages": "^0.5.4",
+    "select-pure": "^2.1.4"
   }
 }
