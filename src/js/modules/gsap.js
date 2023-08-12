@@ -972,10 +972,10 @@ mediaAnimation.add("(max-width: 1359px)", () => {
 //type-face section end
 
 //colors section start
-gsap.from('.colors__palette', {
+gsap.to('.colors__palette', {
     stagger: 0.1,
-    opacity: 0,
-    yPercent: 20,
+    //opacity: 0,
+    yPercent: 100,
     scrollTrigger: {
         trigger: '.colors',
         start: 'top 25%',
