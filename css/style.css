@@ -977,7 +977,11 @@ body {
   fill: #FFFFFF;
 }
 .form__counter-four {
+  cursor: default;
   opacity: 0.3;
+}
+.form__counter-button-minus-four, .form__counter-button-plus-four {
+  cursor: default;
 }
 .form__checkboxes-one {
   margin: 80px 0 0 0;
