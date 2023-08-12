@@ -964,173 +964,33 @@ mediaAnimation.add("(max-width: 1359px)", () => {
 //type-face section end
 
 //colors section start
-gsap.set(".colors__palette", {
-    opacity: 1,
-    yPercent: 50
-  });
-
-  ScrollTrigger.batch(".colors__palette", {
-    interval: 0.1,
-    batchMax: 4,
-    onEnter: (batch) =>
-      gsap.to(batch, {
-        duration: 0.8,
-        opacity: 1,
-        yPercent: 0,
-        ease: "back.out(1)"
-      }),
-    onLeave: (batch) => gsap.to(batch, {
-      opacity: 0,
-      yPercent: -50,
-    }),
-    onEnterBack: (batch) =>
-      gsap.to(batch, {
-        duration: 0.8,
-        opacity: 1,
-        yPercent: 0,
-        ease: "back.out(1)"
-      }),
-    onLeaveBack: (batch) => gsap.to(batch, { 
-          opacity: 0,
-      yPercent: 50,
-    }),
-    start: "top bottom-=20%",
-    end: "bottom top"
-  });
-
-
-
-const tlColorsOne = gsap.timeline({
+gsap.from('.colors__palette', {
+    stagger: 0.1,
+    opacity: 0,
+    yPercent: 20,
     scrollTrigger: {
         trigger: '.colors',
-        start: 'top 20%',
-        toggleActions: 'play none none reverse'
+        start: 'top 25%',
+        toggleActions: 'play none none reverse',
     }
 })
-tlColorsOne.from('.colors__palette:nth-child(1)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsOne.from('.colors__palette:nth-child(2)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsOne.from('.colors__palette:nth-child(3)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-const tlColorsTwo = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.colors',
-        start: '=+20%',
-        toggleActions: 'play none none reverse'
-    }
-})
-tlColorsTwo.from('.colors__palette:nth-child(4)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsTwo.from('.colors__palette:nth-child(5)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsTwo.from('.colors__palette:nth-child(6)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
+// colors section end
 
-const tlColorsThree = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.colors',
-        start: '=+40%',
-        toggleActions: 'play none none reverse'
-    }
-})
-tlColorsThree.from('.colors__palette:nth-child(7)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsThree.from('.colors__palette:nth-child(8)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-tlColorsThree.from('.colors__palette:nth-child(9)', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-const tlColorsFour = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.colors',
-        start: '=+60%',
-        toggleActions: 'play none none reverse'
-    }
-})
-tlColorsFour.from('.colors__palette:nth-child(10)', {
-    duration: 0.5,
-    xPercent: 350,
-    ease: "back.out(0.6)"
-},'<')
-       //colors section end
 //icons section start
-const tlIconsOne = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.icons',
-        start: 'top 20%',
-        toggleActions: 'play none none reverse'
-    }
+const iconsT = document.querySelectorAll('.icons__kit-content');
+iconsT.forEach(icon => {
+    gsap.from(icon, {
+        duration: 0.8,
+        opacity: 0,
+        yPercent: 50,
+        ease: "back.out(1)",
+        scrollTrigger: {
+            trigger: icon,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+        }
+    })
 })
-tlIconsOne.from('.icons__kit-first', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-
-const tlIconsTwo = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.icons',
-        start: '=+20%',
-        toggleActions: 'play none none reverse'
-    }
-})
-tlIconsTwo.from('.icons__kit-second', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
-
-const tlIconsThree = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.icons',
-        start: '=+40%',
-        toggleActions: 'play none none reverse'
-    }
-})
-tlIconsThree.from('.icons__kit-third', {
-    duration: 0.8,
-    opacity: 0,
-    yPercent: 50,
-    ease: "back.out(1)"
-},'<')
 //icons section end
 
 //form section start

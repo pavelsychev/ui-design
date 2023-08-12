@@ -18,8 +18,8 @@ counter_forms.forEach ( function (form) {
     const counter_label_element = form.querySelector('.form__counter-quantity');
     let count = Number(counter_label_element.innerHTML);
 
-    const btn_plus = form.querySelector('.counter-plus');
-    const btn_minus = form.querySelector('.counter-minus');
+    const btn_plus = form.querySelector('.form__counter-button-plus-one');
+    const btn_minus = form.querySelector('.form__counter-button-minus-one');
 
     btn_plus.addEventListener('click', function() {
       counter_label_element.innerHTML = ++count < 10 ? `0` + Math.max(count, 1) : count;
@@ -30,7 +30,7 @@ counter_forms.forEach ( function (form) {
     });
   });
 });
-//input range
+//section form, range
 const rangeInputs = document.querySelectorAll('input[type="range"]')
 
 function handleInputChange(e) {
@@ -45,9 +45,21 @@ function handleInputChange(e) {
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
 
-rangeInputs.forEach(input => {
-  input.addEventListener('input', handleInputChange)
-})
+// rangeInputs.forEach(input => {
+//   input.addEventListener('input', handleInputChange)
+// })
+// // section misc, star rating
+// function initRatings() {
+//   let ratingActive, ratingValue;
+
+//   for (let index = 0; index < initRatings.length; index++) {
+//     const rating = ratings[index];
+//     initRatings(rating);
+//   }
+
+//   function initRatings
+// }
+
 // section headers, burger
 let btnMenu = document.getElementsByClassName("btn-menu");
 let body = document.body;
