@@ -33,17 +33,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
       }
   })
        
-    gsap.from('.icons__kit-content', {
-        stagger: 0.2,
+  
+//colors section end
+
+//icons section start
+const iconsT = document.querySelectorAll('.icons__kit-content');
+iconsT.forEach(icon => {
+    gsap.from(icon, {
+        duration: 0.8,
         opacity: 0,
         yPercent: 50,
+        ease: "back.out(1)",
         scrollTrigger: {
-            trigger: '.icons',
-            start: 'top 30%',
+            trigger: icon,
+            start: 'top 75%',
             toggleActions: 'play none none reverse',
         }
     })
-//colors section end
+})
+//icons section end
 
 //form section start
 
@@ -1328,7 +1336,6 @@ gsap.from('.form__loader', {
 //logo section start
 gsap.from('.logos__inner', {
     yPercent: 100,
-    scrub: true,
     opacity: 0,
     duration: 1,
     ease: 'back.out(1)',
