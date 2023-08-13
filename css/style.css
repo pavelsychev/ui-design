@@ -485,7 +485,6 @@ body {
   height: 320px;
   border-radius: 50px;
   background-color: #2C2738;
-  transform: translateX(500%);
 }
 .type-face__letter-big {
   font-weight: 600;
@@ -497,7 +496,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px 0;
-  transform: translateX(-200%);
 }
 .type-face__font-pre-title {
   font-weight: 600;
