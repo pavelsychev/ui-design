@@ -116,7 +116,6 @@ body{
     height: 320px;
     border-radius: 50px;
     background-color: #2C2738;
-    transform: translateX(500%);
   }
 
   &__letter-big {
@@ -130,7 +129,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px 0;
-    transform: translateX(-200%);
   }
 
   &__font-pre-title {
