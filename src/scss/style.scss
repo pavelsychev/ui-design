@@ -560,7 +560,7 @@ option-pure{
 &__counters{
   margin: 80px 0 0 0;
   display: grid;
-  max-width: 840px;
+  max-width: 400px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
   grid-template-rows: 1fr;
   justify-content: center;
@@ -590,44 +590,24 @@ option-pure{
   fill: #0880AE;
 }
 &__counter-button-plus-one,
-&__counter-button-minus-one,
-&__counter-button-plus-two,
-&__counter-button-minus-three{
+&__counter-button-minus-one{
   &:focus, &:hover{
     background-color: #0880AE;
   }
 }
 &__counter-button-plus-one:hover path,
-&__counter-button-minus-one:hover path,
-&__counter-button-plus-two:hover path,
-&__counter-button-minus-three:hover path{
+&__counter-button-minus-one:hover path{
   fill: #FFFFFF;
 }
 &__counter-button-plus-one:focus path,
-&__counter-button-minus-one:focus path,
-&__counter-button-plus-two:focus path,
-&__counter-button-minus-three:focus path{
+&__counter-button-minus-one:focus path{
   fill: #FFFFFF;
 }
-&__counter-button-minus-one {
-  &.disabled {
-  background-color: #a2a7ad;
-  }
-  &.disabled path{
-    fill: #FFFFFF;
-  }
-}
-&__counter-button-plus-one,
-&__counter-button-plus-two,
-&__counter-button-plus-three,
-&__counter-button-plus-four{
+&__counter-button-plus-one{
   border-left: 1px solid #DBE2EA;
   border-radius: 0 6px 6px 0;
 }
-&__counter-button-minus-one,
-&__counter-button-minus-two,
-&__counter-button-minus-three,
-&__counter-button-minus-four {
+&__counter-button-minus-one{
   border-right: 1px solid #DBE2EA;
   border-radius: 6px 0 0 6px;
 }
@@ -643,20 +623,12 @@ option-pure{
   font-size: 16px;
   color: #2C2738;
 }
-&__counter-button-minus-two,
-&__counter-button-plus-three {
-  background-color: #0880AE;
-}
-&__counter-button-minus-two path,
-&__counter-button-plus-three path{
-  fill: #FFFFFF;
-}
-&__counter-four{
+&__counter-two{
   cursor: default;
   opacity: 0.3;
 }
-&__counter-button-minus-four,
-&__counter-button-plus-four {
+&__counter-button-minus-two,
+&__counter-button-plus-two {
     cursor: default;
 }
 
@@ -1071,21 +1043,22 @@ border: 2px solid #0880AE;
 &__small-buttons{
   margin: 80px 0 0 0;
   display: grid;
-  max-width: 600px;
+  max-width: 240px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
   gap: 30px 40px;
+  
 }
 &__middle-buttons{
   margin: 80px 0 0 0;
   display: grid;
-  max-width: 800px;
+  max-width: 320px;
   grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
   gap: 40px 40px;
 }
 &__big-buttons{
   margin: 80px 0 0 0;
   display: grid;
-  max-width: 1000px;
+  max-width: 400px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
   gap: 40px 40px;
 }
@@ -1128,74 +1101,80 @@ border: 2px solid #0880AE;
   background-color: #FFF;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08), 0px 1px 2px 0px rgba(44, 39, 56, 0.00);
 }
-&__small-button:nth-child(2),
-&__middle-button:nth-child(2),
-&__big-button:nth-child(2){
+&__small-button:nth-child(1):hover,
+&__middle-button:nth-child(1):hover,
+&__big-button:nth-child(1):hover{
   background-color: #FFF;
   box-shadow: 0px 12px 24px 0px rgba(44, 39, 56, 0.08), 0px 6px 12px 0px rgba(44, 39, 56, 0.04);
 }
-&__small-button:nth-child(3),
-&__middle-button:nth-child(3),
-&__big-button:nth-child(3){
+&__small-button:nth-child(1),
+&__middle-button:nth-child(1),
+&__big-button:nth-child(1){
+  &:focus, &:active{
   border: 2px solid #0880AE;
   background-color: #FFF;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08), 0px 2px 4px 0px rgba(44, 39, 56, 0.00);
+  }
 }
-&__small-button:nth-child(4),
-&__middle-button:nth-child(4),
-&__big-button:nth-child(4){
+&__small-button:nth-child(2),
+&__middle-button:nth-child(2),
+&__big-button:nth-child(2){
   border: 1px solid #DBE2EA;
   background-color: #EBF4F8;
   opacity: 0.4;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08);
 }
-&__small-button:nth-child(5),
-&__middle-button:nth-child(5),
-&__big-button:nth-child(5){
+&__small-button:nth-child(3),
+&__middle-button:nth-child(3),
+&__big-button:nth-child(3){
   color: #EBF4F8;
   background-color: #0880AE;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08), 0px 1px 2px 0px rgba(44, 39, 56, 0.08);
 }
-&__small-button:nth-child(6),
-&__middle-button:nth-child(6),
-&__big-button:nth-child(6){
+&__small-button:nth-child(3):hover,
+&__middle-button:nth-child(3):hover,
+&__big-button:nth-child(3):hover{
   color: #EBF4F8;
   background-color: #0880AE;
   box-shadow: 0px 12px 24px 0px rgba(44, 39, 56, 0.16), 0px 6px 12px 0px rgba(44, 39, 56, 0.08);
 }
-&__small-button:nth-child(7),
-&__middle-button:nth-child(7),
-&__big-button:nth-child(7){
-  color: #EBF4F8;
+&__small-button:nth-child(3),
+&__middle-button:nth-child(3),
+&__big-button:nth-child(3){
+  &:focus, &:active{
+    color: #EBF4F8;
   border: 2px solid rgba(44, 39, 56, 0.86);
   background-color: #0880AE;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08), 0px 2px 4px 0px rgba(44, 39, 56, 0.00);
+  }
 }
-&__small-button:nth-child(8),
-&__middle-button:nth-child(8),
-&__big-button:nth-child(8){
+&__small-button:nth-child(4),
+&__middle-button:nth-child(4),
+&__big-button:nth-child(4){
    background-color: #DBE2EA;
    opacity: 0.4;
   box-shadow: 0px 2px 4px 0px rgba(44, 39, 56, 0.08);
 }
-&__small-button:nth-child(9),
-&__middle-button:nth-child(9),
-&__big-button:nth-child(9){
+&__small-button:nth-child(5),
+&__middle-button:nth-child(5),
+&__big-button:nth-child(5){
   border: 2px solid #7C9CBF;
 }
-&__small-button:nth-child(10),
-&__middle-button:nth-child(10),
-&__big-button:nth-child(10){
+&__small-button:nth-child(5):hover,
+&__middle-button:nth-child(5):hover,
+&__big-button:nth-child(5):hover{
   border: 2px solid #0880AE;
 }
-&__small-button:nth-child(11),
-&__middle-button:nth-child(11),
-&__big-button:nth-child(11){
-  border: 2px solid #756F86;
+&__small-button:nth-child(5),
+&__middle-button:nth-child(5),
+&__big-button:nth-child(5){
+  &:focus, &:active{
+    border: 2px solid #756F86;
+  }
 }
-&__small-button:nth-child(12),
-&__middle-button:nth-child(12),
-&__big-button:nth-child(12){
+&__small-button:nth-child(6),
+&__middle-button:nth-child(6),
+&__big-button:nth-child(6){
   opacity: 0.4;
   border: 2px solid #756F86;
 }

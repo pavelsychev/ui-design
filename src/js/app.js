@@ -8,26 +8,32 @@ import * as chartJS from "./modules/charts.js";
 /*Импорт select-pure.js*/
 import SelectPure from "select-pure";
 
+
 //counter form
 const counter_forms = [... document.querySelectorAll('.form__counter')];
 
 counter_forms.forEach ( function (form) {
-  form.addEventListener('click', function (ev) {
+  const btn_plus = form.querySelector('.counter-plus');
+  const btn_minus = form.querySelector('.counter-minus');
+
+  btn_plus.addEventListener('click', function() {
     const counter_label_element = form.querySelector('.form__counter-quantity');
     let count = Number(counter_label_element.innerHTML);
+    count = (Math.max(1, count + 1));
 
-    const btn_plus = form.querySelector('.form__counter-button-plus-one');
-    const btn_minus = form.querySelector('.form__counter-button-minus-one');
+    counter_label_element.innerHTML = count < 10 ? '0' + count : count;
+  });
 
-    btn_plus.addEventListener('click', function() {
-      counter_label_element.innerHTML = ++count < 10 ? `0` + Math.max(count, 1) : count;
-    });
+  btn_minus.addEventListener('click', function() {
+    const counter_label_element = form.querySelector('.form__counter-quantity');
+    let count = Number(counter_label_element.innerHTML);
+    count = (Math.max(1, count - 1));
 
-    btn_minus.addEventListener('click', function() {
-      counter_label_element.innerHTML = --count < 10 ? `0` + Math.max(count, 1) : count;
-    });
+    counter_label_element.innerHTML = count < 10 ? '0' + count : count;
   });
 });
+
+
 //section form, range
 const rangeInputs = document.querySelectorAll('input[type="range"]')
 

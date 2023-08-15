@@ -66,35 +66,28 @@
 }
 @media (max-width: 840px){
   .form{
-    &__search{
-      justify-content: center;
-    }
     &__area-select-three{
       margin: 150px 0 0 0;
     }
+    &__search,
     &__checkboxes-one,
     &__checkboxes-two,
     &__checkboxes-radio-one,
     &__checkboxes-radio-two,
     &__checkboxes-toggle-one,
-    &__checkboxes-toggle-two {
-      justify-content: center;
-    }
+    &__checkboxes-toggle-two,
     &__checkbox-label, 
     &__checkbox-radio-label,
-    &__checkbox-toggle-label {
+    &__checkbox-toggle-label,
+    &__tags,
+    &__loaders {
       justify-content: center;
     }
-    &__tags{
-      justify-content: center;
-    }
+    &__counters,
     &__small-buttons,
     &__middle-buttons,
-    &__big-buttons{
-      justify-content: center;
-    }
-    &__loaders{
-      justify-content: center;
+    &__big-buttons {
+      margin: 80px auto;
     }
   }
   .logos{
