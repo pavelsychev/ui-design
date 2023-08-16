@@ -51,7 +51,9 @@ function handleInputChange(e) {
   
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
-
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange)
+})
 
  // section misc, star rating
  const rating_groups = [... document.getElementsByClassName('misc__rating rating__set')];
